@@ -1,0 +1,137 @@
+<html>
+
+<head>
+    <title>Chuck the numbers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<center>
+    <h1 id="omi">Calculator</h1>
+    <div>
+        <input id="aa" type="number">
+        <h3>+</h3>
+        <input id="bb" type="number">
+        <button onclick="add()"> Add </button>
+        <label id="cc"for="number"></label>
+    </div>
+    <div>
+        <input id="a" type="number">
+        <h3>-</h3>
+        <input id="c" type="number">
+        <button onclick="subtract()"> Subtract </button>
+        <label id="d"for="number"></label>
+    </div>
+    <div>
+        <input id="i" type="number">
+        <h3>x</h3>
+        <input id="m" type="number">
+        <button onclick="multiply()"> Multiply </button>
+        <label id="p"for="number"></label>
+    </div>
+    <div>
+        <h5> Click round to round the answer</h5>
+        <input id="w" type="number">
+        <h3>/</h3>
+        <input id="o" type="number">
+        <button onclick="divide()"> Divide </button>
+        <input id="po" type="number" placeholder="How many decimal points to round to">
+        <button onclick="round()"> Round</button>
+        <label id="z"for="number"></label>
+    </div>
+    <div>
+        <input id="dd" type="number">
+        <h3>^</h3>
+        <input id="ee" type="number">
+        <button onclick="power()"> Power </button>
+        <label id="ff"for="number"></label>
+    </div>
+    <div>
+        <h5> Click round to round the answer </h5>
+        <input id="popo" type="number">
+        <button onclick="root()"> Square root </button>
+        <input id="coco" type="number" placeholder="How many decimal points to round to">
+        <button onclick="po()">Round</button>
+        <label id="dodo"for="number"></label>
+    </div>
+    <script>
+        
+    function multiply(){
+        let i=document.getElementById("i").value;
+        console.log("1st value is"+i+".");
+        let m=document.getElementById("m").value;
+        console.log("2nd value is"+m+".");
+        let x=i*m;
+        console.log("3rd value is"+x+".");
+        document.getElementById("p").innerHTML=x;
+    }
+
+    function subtract(){
+        let i=document.getElementById("a").value;
+        console.log("1st value is"+i+".");
+        let m=document.getElementById("c").value;
+        console.log("2nd value is"+m+".");
+        let x=i-m;
+        console.log("3rd value is"+x+".");
+        document.getElementById("d").innerHTML=x;
+    }
+
+    function divide(){
+        let i=document.getElementById("w").value;
+        console.log("1st value is"+i+".");
+        let m=document.getElementById("o").value;
+        console.log("2nd value is"+m+".");
+        let x=i/m;
+        console.log("3rd value is"+x+".");
+        document.getElementById("z").innerHTML=x;
+    }
+
+    function add(){
+        let i=document.getElementById("aa").value;
+        console.log("1st value is"+i+".");
+        let m=document.getElementById("bb").value;
+        console.log("2nd value is"+m+".");
+        let x=parseInt(document.getElementById("aa").value)+parseInt(document.getElementById("bb").value);
+        console.log("3rd value is"+x+".");
+        document.getElementById("cc").innerHTML=x;
+    }
+    function power(){
+        let i=document.getElementById("dd").value;
+        console.log("1st value is"+i+".");
+        let m=document.getElementById("ee").value;
+        console.log("2nd value is"+m+".");
+        let x=i**m;
+        console.log("3rd value is"+x+".");
+        document.getElementById("ff").innerHTML=x;
+    }
+    function round(){
+        let i=document.getElementById("w").value;
+        console.log("1st value is"+i+".");
+        let m=document.getElementById("o").value;
+        console.log("2nd value is"+m+".");
+         r=document.getElementById("po").value
+        let x=i/m;
+        console.log("3rd value is"+x+".");
+        document.getElementById("z").innerHTML=x.toFixed(r);
+    }
+    function root(){
+        let i=document.getElementById("popo").value;
+        let x=Math.sqrt(i)
+        console.log("3rd value is"+x+".");
+        document.getElementById("dodo").innerHTML=x;
+    }
+    function po(){
+        let i=document.getElementById("popo").value;
+        let x=Math.sqrt(i)
+        console.log("3rd value is"+x+".");
+        let r=document.getElementById("coco").value
+        document.getElementById("dodo").innerHTML=x.toFixed(r);
+    }
+    </script>
+</center>
+</body>
+
+</html
